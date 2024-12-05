@@ -1,0 +1,23 @@
+name: Deploy to Windows VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Windows
+      run: |
+        echo "Setting up Windows 11 VPS..."
+        # Các lệnh triển khai phần mềm hoặc cài đặt
+
+    - name: Deploy application
+      run: |
+        echo "Deploying app to VPS"
+        # Thực hiện lệnh sao chép mã hoặc ứng dụng lên VPS qua SSH hoặc RDP.
